@@ -3,14 +3,10 @@
 // - Stampa un "badword index" calcolato come il numero di parole censurate su il numero di parole totali
 var testo = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
 var listaNera = ['ipsum', 'sed', 'labore'];
-
-for(var i = 0; i < testo.length; i++) {
-
+var paroleCensurate = 'xxx';
+for(var i = 0; i < listaNera.length; i++) {
+  if (testo.includes(listaNera[i])) {
+    testo = testo.replace(listaNera[i], paroleCensurate);
+  }
 }
-
-var trovato1 = testo.includes(listaNera[]);
-var trovato2 = testo.includes('sed');
-var trovato3 = testo.includes('labore');
-console.log(trovato1);
-console.log(trovato2);
-console.log(trovato3);
+console.log(testo);
